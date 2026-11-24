@@ -56,9 +56,17 @@ Launch a scam and fake-content check service under your own brand: users send a 
 - **Claim and hoax check: published fact checks, then cited web research**: A claim gets published fact checks first.
 - **Router and combined verdict with plain summary**: One item can get several checks.
 
+## How it works
+
+A technical case study of the architecture, one end-to-end flow, the key engineering decisions and how you would build something like this: **[docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md)**.
+
 ## A look at the code
 
-**Combining several checks into one verdict**: [`snippets/combine-verdicts.ts`](snippets/combine-verdicts.ts). Several independent checks (link, image, message, claim) are merged into one verdict, with each axis decided by its own rule. Duplicate findings are listed once and an axis nobody checked is left out instead of being shown as safe.
+Real excerpts from the source, shown for illustration:
+
+- **Combining several checks into one verdict** ([`snippets/combine-verdicts.ts`](snippets/combine-verdicts.ts)): Several independent checks (link, image, message, claim) are merged into one verdict, with each axis decided by its own rule. Duplicate findings are listed once and an axis nobody checked is left out instead of being shown as safe.
+- **Spotting look-alike domains** ([`snippets/lookalike-domains.ts`](snippets/lookalike-domains.ts)): Names are folded so Cyrillic letters, look-alike digits and sequences like "rn" read the same, then compared with a banded edit distance that gives up early, so a near-copy of a bank's address is caught cheaply.
+- **Checksum-gated redaction** ([`snippets/redaction-checksums.ts`](snippets/redaction-checksums.ts)): Card numbers, IBANs, bank accounts and birth numbers are removed before text reaches any model, but only when the number passes its checksum, so ordinary numbers are left alone. The pass repeats until nothing changes.
 
 ## Requirements (full version)
 
