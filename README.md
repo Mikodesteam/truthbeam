@@ -8,6 +8,8 @@
   <b>AI scam and fake-content checker: Flutter app, Node server and console.</b>
 </p>
 
+<p align="center"><sub>AI scam detector & fact checker source code · phishing link check · fake image check · white-label app</sub></p>
+
 <p align="center">
   <a href="https://truthbeam-demo.mikodes.com/"><b>▶ Live demo</b></a> ·
   <a href="https://truthbeam.mikodes.com/docs/"><b>Docs</b></a> ·
@@ -78,6 +80,20 @@ Real excerpts from the source, shown for illustration:
 - A domain or subdomain with https for the server
 
 Not included: Hosting, VPS, domain and TLS certificate; Provider usage: Google Web Risk, Google Cloud Vision, Google Fact Check Tools, Sightengine, Anthropic or Perplexity, speech to text,…; Apple Developer Program and Google Play developer accounts; Reading SMS, calls or notifications in the background; Checking a video by its platform link.
+
+## FAQ
+
+**Is this the full source code?**  
+No. This repository is a showcase with screenshots, a technical case study and real code excerpts. The complete Truthbeam source code is sold at [store.mikodes.com/p/truthbeam](https://store.mikodes.com/p/truthbeam/).
+
+**What is Truthbeam built with?**  
+Flutter, Node.js.
+
+**Can I try it before buying?**  
+Yes, open the [live demo](https://truthbeam-demo.mikodes.com/).
+
+**Do I get help with the installation?**  
+Free setup help is included with the store purchase; questions go to [mikodes.com/support](https://mikodes.com/support).
 
 ## Get the full source code
 
